@@ -1,0 +1,33 @@
+# @stackline/brace {{PACKAGE_VERSION}}
+
+## Purpose
+
+`@stackline/brace` updates the editor engine behind the historical `brace` package contract. It is intended for applications that use side-effect deep imports such as `brace/mode/javascript` and `brace/theme/monokai`.
+
+## Engine and inventory
+
+- Ace Editor: {{ACE_VERSION}}
+- Modes: {{MODE_COUNT}}
+- Themes: {{THEME_COUNT}}
+- Extensions: {{EXTENSION_COUNT}}
+- Snippet paths: {{SNIPPET_COUNT}}
+- Inline workers: {{WORKER_COUNT}}
+- Runtime dependencies: 0
+
+All counts are generated from the pinned Ace build and compatibility inventory.
+
+## Compatibility
+
+All JavaScript paths shipped by `brace@0.11.1` are tested. Removed historical identifiers are retained with compatibility aliases or preserved modules. `acequire` remains available and the current Ace `require` loader is also exposed.
+
+## Workers
+
+Each imported mode registers only the workers it references. Worker source is included in the JavaScript bundle and registered as a Blob URL. Explicit module URLs configured by the consumer are preserved.
+
+## Verification
+
+Release verification includes Node contract tests, the complete legacy path inventory, Browserify, esbuild, a real Chrome editor and worker, TypeScript 3.9, current TypeScript, packed direct installation, npm alias installation, package linting, documentation checks, and runtime dependency audit.
+
+## Licensing
+
+Brace-derived compatibility work is MIT licensed. Bundled Ace code is BSD-3-Clause licensed. Both full license texts and copyright notices are included.

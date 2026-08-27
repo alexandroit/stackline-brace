@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://alexandro.net/docs/vanilla/brace/</loc></url>
+  <url><loc>https://alexandro.net/docs/vanilla/brace/guides/migration.md</loc></url>
+  <url><loc>https://alexandro.net/docs/vanilla/brace/guides/compatibility.md</loc></url>
+  <url><loc>https://alexandro.net/docs/vanilla/brace/guides/third-party-licenses.md</loc></url>
+  <url><loc>https://alexandro.net/docs/vanilla/brace/examples/commonjs.cjs</loc></url>
+  <url><loc>https://alexandro.net/docs/vanilla/brace/examples/esm.mjs</loc></url>
+</urlset>

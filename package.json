@@ -1,0 +1,145 @@
+{
+  "name": "@stackline/brace",
+  "version": "1.0.0",
+  "description": "Compatibility-first Browserify build of the modern Ace editor with inline workers",
+  "type": "commonjs",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": "./index.js"
+    },
+    "./index": {
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": "./index.js"
+    },
+    "./index.js": {
+      "import": {
+        "types": "./index.d.mts",
+        "default": "./index.mjs"
+      },
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "default": "./index.js"
+    },
+    "./mode/*.js": "./mode/*.js",
+    "./mode/*": "./mode/*.js",
+    "./theme/*.js": "./theme/*.js",
+    "./theme/*": "./theme/*.js",
+    "./ext/*.js": "./ext/*.js",
+    "./ext/*": "./ext/*.js",
+    "./keybinding/*.js": "./keybinding/*.js",
+    "./keybinding/*": "./keybinding/*.js",
+    "./snippets/*.js": "./snippets/*.js",
+    "./snippets/*": "./snippets/*.js",
+    "./worker/*.js": "./worker/*.js",
+    "./worker/*": "./worker/*.js",
+    "./dist/*.json": "./dist/*.json",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": true,
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.mts",
+    "index.d.ts",
+    "mode",
+    "theme",
+    "ext",
+    "keybinding",
+    "snippets",
+    "worker",
+    "dist",
+    "examples",
+    "CHANGELOG.md",
+    "LICENSE",
+    "LICENSES",
+    "NOTICE",
+    "README.md",
+    "SECURITY.md",
+    "THIRD_PARTY_LICENSES.md"
+  ],
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "build": "node scripts/generate.mjs && node scripts/build-esm.mjs",
+    "check:generated": "npm run build && git diff --exit-code -- index.js index.mjs mode theme ext keybinding snippets worker dist",
+    "lint": "eslint scripts test docs-site examples index.mjs",
+    "test:node": "node --test test/node.test.cjs test/inventory.test.cjs test/legacy-paths.test.cjs test/workers.test.cjs",
+    "test:bundlers": "node test/bundlers.cjs",
+    "test:browser": "node test/browser.cjs",
+    "test:types": "node node_modules/typescript-3-9/bin/tsc -p test/types/tsconfig.legacy.json && node node_modules/typescript/bin/tsc -p test/types/tsconfig.current.json",
+    "test:runtime": "node test/runtime-compat.cjs",
+    "test": "npm run test:node && npm run test:bundlers && npm run test:browser && npm run test:types",
+    "test:smoke": "node scripts/smoke-install.mjs",
+    "test:registry": "node scripts/smoke-registry.mjs",
+    "test:docs": "npm run docs:build && node scripts/check-docs.mjs",
+    "check:package": "publint && attw --pack .",
+    "pack:check": "npm pack --dry-run",
+    "audit:dependencies": "npm audit --omit=dev --audit-level=low",
+    "audit:signatures": "npm audit signatures",
+    "docs:build": "npm run build && node scripts/build-docs.mjs",
+    "docs:serve": "node scripts/serve-docs.mjs",
+    "verify": "npm run clean && npm run lint && npm run build && npm run check:generated && npm test && npm run test:runtime && npm run test:smoke && npm run check:package && npm run pack:check && npm run test:docs && npm run audit:dependencies",
+    "prepack": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandroit/stackline-brace.git"
+  },
+  "homepage": "https://alexandro.net/docs/vanilla/brace/",
+  "bugs": {
+    "url": "https://github.com/alexandroit/stackline-brace/issues"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "0.18.5",
+    "@eslint/js": "10.0.1",
+    "ace-builds": "1.44.0",
+    "browserify": "17.0.1",
+    "esbuild": "0.28.2",
+    "eslint": "10.9.1",
+    "playwright-core": "1.62.1",
+    "publint": "0.3.24",
+    "typescript": "7.0.2",
+    "typescript-3-9": "npm:typescript@3.9.10"
+  },
+  "keywords": [
+    "ace",
+    "browserify",
+    "code-editor",
+    "editor",
+    "inline-worker",
+    "typescript",
+    "zero-dependency",
+    "stackline"
+  ],
+  "author": "Stackline Maintainers",
+  "contributors": [
+    "Thorsten Lorenz",
+    "Ajax.org B.V. and Ace contributors"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="description" content="Modern Ace Editor packaging with Brace-compatible deep imports and inline workers.">
+    <link rel="canonical" href="https://alexandro.net/docs/vanilla/brace/">
+    <link rel="stylesheet" href="./styles.css">
+    <title>@stackline/brace | Modern Ace, Brace-compatible</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareSourceCode",
+        "name": "@stackline/brace",
+        "version": "{{PACKAGE_VERSION}}",
+        "codeRepository": "https://github.com/alexandroit/stackline-brace",
+        "programmingLanguage": "JavaScript",
+        "runtimePlatform": "Web browser and Node.js build tools",
+        "license": [
+          "https://spdx.org/licenses/MIT.html",
+          "https://spdx.org/licenses/BSD-3-Clause.html"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="/docs/open-source/" aria-label="Stackline open source catalog">
+        <span class="wordmark-mark" aria-hidden="true">S</span>
+        <span>Stackline Open Source</span>
+      </a>
+      <nav aria-label="Package links">
+        <a href="https://www.npmjs.com/package/@stackline/brace">npm</a>
+        <a href="https://github.com/alexandroit/stackline-brace">GitHub</a>
+        <a href="#reference">Reference</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="package-title">
+        <div class="intro-copy">
+          <p class="eyebrow">Ace {{ACE_VERSION}} · Brace-compatible packaging</p>
+          <h1 id="package-title">@stackline/brace</h1>
+          <p class="lede">A current code editor engine behind the imports your existing application already uses.</p>
+          <div class="install-row">
+            <code id="install-command">npm install brace@npm:@stackline/brace@^{{PACKAGE_VERSION}}</code>
+            <button id="copy-install" type="button" aria-label="Copy install command" title="Copy install command">Copy</button>
+          </div>
+          <ul class="facts" aria-label="Package facts">
+            <li><strong>{{MODE_COUNT}}</strong><span>modes</span></li>
+            <li><strong>{{THEME_COUNT}}</strong><span>themes</span></li>
+            <li><strong>{{WORKER_COUNT}}</strong><span>inline workers</span></li>
+            <li><strong>0</strong><span>runtime dependencies</span></li>
+          </ul>
+        </div>
+
+        <div class="workbench" aria-label="Interactive Ace editor">
+          <div class="workbench-toolbar">
+            <label>
+              <span>Language</span>
+              <select id="language">
+                <option value="javascript">JavaScript</option>
+                <option value="typescript">TypeScript</option>
+                <option value="json">JSON</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+              </select>
+            </label>
+            <label>
+              <span>Theme</span>
+              <select id="theme">
+                <option value="monokai">Monokai</option>
+                <option value="github">GitHub</option>
+                <option value="tomorrow_night">Tomorrow Night</option>
+              </select>
+            </label>
+            <label class="toggle">
+              <input id="wrap" type="checkbox">
+              <span>Wrap</span>
+            </label>
+            <output id="worker-status" class="worker-status">Worker ready</output>
+          </div>
+          <div id="editor" aria-label="Editable code sample"></div>
+          <div class="workbench-footer">
+            <span id="cursor-position">Ln 1, Col 1</span>
+            <span>Ace {{ACE_VERSION}}</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="compatibility" id="reference" aria-labelledby="compatibility-title">
+        <div class="section-heading">
+          <p class="eyebrow">Migration surface</p>
+          <h2 id="compatibility-title">Keep the paths. Replace the package.</h2>
+        </div>
+        <div class="code-columns">
+          <div>
+            <h3>Existing imports</h3>
+            <pre><code>const ace = require('brace');
+require('brace/mode/javascript');
+require('brace/theme/monokai');</code></pre>
+          </div>
+          <div>
+            <h3>Dependency change</h3>
+            <pre><code>"dependencies": {
+  "brace": "npm:@stackline/brace@^{{PACKAGE_VERSION}}"
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="reference-band" aria-label="Package reference">
+        <a href="./guides/migration.md"><strong>Migration</strong><span>Alias and direct installs</span></a>
+        <a href="./guides/compatibility.md"><strong>Compatibility</strong><span>Stable 1.x contract</span></a>
+        <a href="./guides/third-party-licenses.md"><strong>Licenses</strong><span>MIT and BSD-3-Clause</span></a>
+        <a href="https://github.com/alexandroit/stackline-brace/security"><strong>Security</strong><span>Private reporting</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <span>@stackline/brace {{PACKAGE_VERSION}}</span>
+      <span>Independently maintained by Stackline</span>
+    </footer>
+
+    <script src="./brace-docs.js"></script>
+    <script src="./app.js"></script>
+    <script src="./analytics.js"></script>
+  </body>
+</html>

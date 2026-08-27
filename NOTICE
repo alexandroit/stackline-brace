@@ -1,0 +1,13 @@
+@stackline/brace
+Copyright 2026 Stackline Maintainers
+
+This package is a compatibility-focused continuation of Brace:
+Copyright 2013 Thorsten Lorenz, licensed under the MIT License.
+
+This package includes generated Ace Editor code:
+Copyright 2010 Ajax.org B.V. and Ace contributors, licensed under the
+BSD 3-Clause License.
+
+The complete MIT license is in LICENSE. The complete Ace BSD 3-Clause license
+is in LICENSES/ACE-BSD-3-Clause.txt. Attribution details are documented in
+THIRD_PARTY_LICENSES.md.

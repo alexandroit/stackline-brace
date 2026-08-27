@@ -1,0 +1,17 @@
+# @stackline/brace
+
+Maintained Brace-compatible packaging for Ace Editor {{ACE_VERSION}}.
+
+Install directly:
+
+`npm install @stackline/brace`
+
+Install as a drop-in replacement:
+
+`npm install brace@npm:@stackline/brace@^{{PACKAGE_VERSION}}`
+
+The package preserves Brace deep imports, supports CommonJS and an ESM root, embeds browser workers, supports TypeScript 3.9, and has zero runtime dependencies.
+
+Canonical documentation: https://alexandro.net/docs/vanilla/brace/
+Source: https://github.com/alexandroit/stackline-brace
+npm: https://www.npmjs.com/package/@stackline/brace

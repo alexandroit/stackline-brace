@@ -1,0 +1,10 @@
+{
+  "package": "@stackline/brace",
+  "version": "1.0.0",
+  "aceBuilds": {
+    "version": "1.44.0",
+    "npmShasum": "d657730f665fccf72d2945d95887e12c514a29f1",
+    "npmIntegrity": "sha512-PFNMSYqFdEUkul2Ntud0HvA09AgY+F1ag0UYdpMH60wNI/qOA8cB8tlTgoALMEwIdUPJK2CjrIQ7OnbiSS/ugQ=="
+  },
+  "runtimeDependencies": 0
+}
