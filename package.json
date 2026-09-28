@@ -1,6 +1,6 @@
 {
   "name": "@stackline/brace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compatibility-first Browserify build of the modern Ace editor with inline workers",
   "type": "commonjs",
   "main": "./index.js",
@@ -128,7 +128,9 @@
     "inline-worker",
     "typescript",
     "zero-dependency",
-    "stackline"
+    "stackline",
+    "ace-editor",
+    "syntax-highlighting"
   ],
   "author": "Stackline Maintainers",
   "contributors": [
@@ -141,5 +143,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "overrides": {
+    "qs": "6.16.0"
   }
 }
