@@ -32,3 +32,17 @@ dependencies are development-only and absent from the published package's
 runtime closure. The full audit retains four low-severity dependency entries
 for this one advisory; the production audit remains clean. The development
 `qs` parser is pinned to the patched 6.16.0 release.
+
+## Ace loader path normalization (2026-09-28)
+
+The Ace 1.44.0 module loader repeated an unanchored `segment/../` regex.
+Long relative module names passed to `ace.require` caused quadratic work, as
+confirmed with adversarial all-dot names. `scripts/normalize-module-path.cjs`
+replaces that loop at generation time; the build rejects a changed upstream
+patch site. Linked segments and monotonic candidate queues retain Ace's exact
+first `/./`, then first `segment/../` ordering in linear time and space. This
+intentionally preserves non-POSIX edge cases and the existing plugin handling.
+The generated runtime remains ES5-compatible and requires no additional module.
+Regression tests compare 97,656 paths with the pinned upstream implementation,
+resolve real relative/plugin modules, and bound large public-API inputs in a
+child process. This addresses CodeQL alert 1 without suppressing its rule.

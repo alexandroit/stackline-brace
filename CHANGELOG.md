@@ -2,6 +2,7 @@
 
 ## [1.0.1] - 2026-09-28
 
+- Replace quadratic Ace loader path normalization with a linear compatibility-preserving segment rewrite.
 - Organize package documentation, preserve API and migration examples, and add Stackline community links.
 - Update the development-only qs parser to 6.16.0; preserve the existing runtime dependency contract.
 - Improve package discovery keywords with precise domain terms and `stackline`.

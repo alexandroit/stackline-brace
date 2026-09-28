@@ -1,6 +1,7 @@
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import normalizeRelativeModulePath from './normalize-module-path.cjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const aceRoot = join(root, 'node_modules', 'ace-builds');
@@ -37,7 +38,19 @@ async function listMatching(directory, expression) {
   return (await readdir(directory)).filter((name) => expression.test(name)).sort();
 }
 
-const core = makeBrowserifySafe(await readFile(join(aceRoot, 'src-noconflict', 'ace.js'), 'utf8'));
+const upstreamCore = await readFile(join(aceRoot, 'src-noconflict', 'ace.js'), 'utf8');
+const legacyNormalization = String.raw`        while(moduleName.indexOf(".") !== -1 && previous != moduleName) {
+            var previous = moduleName;
+            moduleName = moduleName.replace(/\/\.\//, "/").replace(/[^\/]+\/\.\.\//, "");
+        }`;
+const normalizationDeclaration = 'var normalizeModule = function(parentId, moduleName) {';
+if (upstreamCore.split(legacyNormalization).length !== 2 ||
+    upstreamCore.split(normalizationDeclaration).length !== 2) {
+  throw new Error('Ace loader normalization changed; review the linear compatibility patch.');
+}
+const core = makeBrowserifySafe(upstreamCore
+  .replace(legacyNormalization, '        moduleName = normalizeRelativeModulePath(moduleName);')
+  .replace(normalizationDeclaration, `${normalizeRelativeModulePath.toString()}\n\n${normalizationDeclaration}`));
 await write('index.js', `${core}\n/* Modern Ace alias retained alongside the Brace loader name. */\nif (module.exports && !module.exports.require) module.exports.require = module.exports.acequire;\n`);
 
 const workerNames = (await listMatching(sourceRoot, /^worker-[a-z0-9_]+\.js$/))

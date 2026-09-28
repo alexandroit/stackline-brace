@@ -9,4 +9,6 @@ if (typeof brace.edit !== 'function') throw new Error('edit is unavailable');
 if (brace.acequire !== brace.require) throw new Error('loader aliases diverged');
 if (typeof brace.acequire('ace/mode/javascript').Mode !== 'function') throw new Error('JavaScript mode is unavailable');
 
+if (brace.require('.'.repeat(100000)) !== undefined) throw new Error('relative loader regression');
+
 console.log('Runtime compatibility check passed.');

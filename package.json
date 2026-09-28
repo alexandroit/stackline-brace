@@ -82,7 +82,7 @@
     "build": "node scripts/generate.mjs && node scripts/build-esm.mjs",
     "check:generated": "npm run build && git diff --exit-code -- index.js index.mjs mode theme ext keybinding snippets worker dist",
     "lint": "eslint scripts test docs-site examples index.mjs",
-    "test:node": "node --test test/node.test.cjs test/inventory.test.cjs test/legacy-paths.test.cjs test/workers.test.cjs",
+    "test:node": "node --test test/node.test.cjs test/inventory.test.cjs test/legacy-paths.test.cjs test/workers.test.cjs test/normalization-security.test.cjs",
     "test:bundlers": "node test/bundlers.cjs",
     "test:browser": "node test/browser.cjs",
     "test:types": "node node_modules/typescript-3-9/bin/tsc -p test/types/tsconfig.legacy.json && node node_modules/typescript/bin/tsc -p test/types/tsconfig.current.json",
