@@ -5,7 +5,7 @@
 Install the Stackline package under the legacy package name:
 
 ```bash
-npm install brace@npm:@stackline/brace@^1.0.0
+npm install brace@npm:@stackline/brace@^1.0.1
 ```
 
 Existing imports remain unchanged:

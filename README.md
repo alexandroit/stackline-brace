@@ -42,7 +42,7 @@ npm install @stackline/brace
 Or replace `brace` without changing existing source imports:
 
 ```bash
-npm install brace@npm:@stackline/brace@^1.0.0
+npm install brace@npm:@stackline/brace@^1.0.1
 ```
 
 ## Usage
