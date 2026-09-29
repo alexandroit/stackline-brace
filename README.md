@@ -1,17 +1,18 @@
 # @stackline/brace
 
-> Compatibility-first Browserify build of the modern Ace editor with inline workers
+> Compatibility-first Browserify build of the modern Ace editor with inline workers.
 
 [![npm version](https://img.shields.io/npm/v/@stackline/brace.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/brace)
-[![license](https://img.shields.io/npm/l/@stackline/brace.svg?style=flat-square)](https://github.com/alexandroit/stackline-brace/blob/main/LICENSE)
-[![GitHub repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-brace)
+[![license](https://img.shields.io/npm/l/@stackline/brace.svg?style=flat-square)](https://github.com/alexandroit/stackline-brace)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-brace-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-brace)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/brace/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
-**[Documentation](https://alexandro.net/docs/vanilla/brace/)** |
-**[npm](https://www.npmjs.com/package/@stackline/brace)** |
-**[Issues](https://github.com/alexandroit/stackline-brace/issues)** |
-**[Repository](https://github.com/alexandroit/stackline-brace)**
+**[Documentation](https://alexandro.net/docs/vanilla/brace/)** | **[npm](https://www.npmjs.com/package/@stackline/brace)** | **[Issues](https://github.com/alexandroit/stackline-brace/issues)** | **[Repository](https://github.com/alexandroit/stackline-brace)**
 
-**Package version:** `1.0.2`
+**Current package version:** `1.0.3`
+
+---
 
 ## Why this package?
 
@@ -21,7 +22,7 @@ A compatibility-first Browserify build of the modern Ace Editor. It preserves Br
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/brace@1.0.2` |
+| Package | `@stackline/brace@1.0.3` |
 | Node.js runtime | `>=12` |
 | CommonJS / primary entry | `./index.js` |
 | ES module entry | `./index.mjs` |
@@ -174,15 +175,6 @@ npm run test:smoke
 
 Run `npm run verify` and inspect the package contents before release. Publish a new version through the [GitHub Actions publishing workflow](https://github.com/alexandroit/stackline-brace/actions/workflows/publish.yml), using the SHA-512 digest of the reviewed tarball. Verify the exact published version, tarball integrity, and npm provenance after the run.
 
-## Community and Support
-
-Report reproducible package issues in the [issue tracker](https://github.com/alexandroit/stackline-brace/issues). Use the [security policy](https://github.com/alexandroit/stackline-brace/blob/main/SECURITY.md) for vulnerability reports.
-
-- [Stackline / Alexandro.Net](https://alexandro.net/)
-- [GitHub](https://github.com/alexandroit)
-- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
-- [Reddit community: r/Stackline](https://www.reddit.com/r/Stackline/)
-
 ## License
 
 <a id="independence-and-attribution"></a>
@@ -192,3 +184,26 @@ Report reproducible package issues in the [issue tracker](https://github.com/ale
 `@stackline/brace` is independently maintained and is not affiliated with the original Brace or Ace maintainers.
 
 Compatibility work derived from Brace is MIT licensed. Bundled Ace code remains BSD-3-Clause licensed. Both copyright notices and complete license texts are included in the package. See [NOTICE](https://github.com/alexandroit/stackline-brace/blob/main/NOTICE) and [THIRD_PARTY_LICENSES.md](https://github.com/alexandroit/stackline-brace/blob/main/THIRD_PARTY_LICENSES.md).
+
+## Credits and original authors
+
+- Stackline Maintainers.
+- Thorsten Lorenz.
+- Ajax.org B.V. and Ace contributors.
+- Copyright 2013 Thorsten Lorenz.
+- Copyright 2026 Stackline Maintainers.
+- Copyright 2013 Thorsten Lorenz, licensed under the MIT License.
+- Copyright 2010 Ajax.org B.V. and Ace contributors, licensed under the.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.
