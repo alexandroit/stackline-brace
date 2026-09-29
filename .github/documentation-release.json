@@ -1,0 +1,32 @@
+{
+  "repository": "alexandroit/stackline-brace",
+  "packages": [
+    {
+      "name": "@stackline/brace",
+      "path": "README.md",
+      "version": "1.0.3",
+      "baselineVersion": "1.0.2",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "brace",
+        "browser",
+        "typescript",
+        "nodejs",
+        "ace",
+        "browserify",
+        "code-editor",
+        "editor",
+        "inline-worker",
+        "zero-dependency",
+        "ace-editor",
+        "syntax-highlighting"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/brace/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/brace/-/brace-1.0.2.tgz",
+      "baselineIntegrity": "sha512-rGYvTGYabV0PCRMuMHrYzLW+EozV4BGDtjSdQk+t38FtDmZmCd5Fyw1wd5gASF6BKpWfAkujE+ucvLCsF9sS3w==",
+      "expectedSha512": "08a5b6fb3d126cc586cb5a8287df0fb4b51ec2f37958c4faf5819db3d5e1499d2fa3b411e5df7f8ccaced96bd1291e25875615090ddedba53f7b0d6a649a117e",
+      "tag": "docs-stackline-brace-v1.0.3"
+    }
+  ]
+}
