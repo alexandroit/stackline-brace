@@ -1,8 +1,5 @@
 import { cp, mkdir, readFile, rm, unlink, writeFile } from 'node:fs/promises';
-import { createRequire } from 'node:module';
-
-const require = createRequire(import.meta.url);
-const browserify = require('browserify');
+import { build } from 'esbuild';
 const root = new URL('../', import.meta.url);
 const output = new URL('../site-dist/', import.meta.url);
 const packageJson = JSON.parse(await readFile(new URL('package.json', root), 'utf8'));
@@ -20,13 +17,13 @@ await cp(new URL('THIRD_PARTY_LICENSES.md', root), new URL('guides/third-party-l
 await cp(new URL('examples/commonjs.cjs', root), new URL('examples/commonjs.cjs', output));
 await cp(new URL('examples/esm.mjs', root), new URL('examples/esm.mjs', output));
 
-const bundle = await new Promise((resolve, reject) => {
-  browserify(new URL('docs-site/editor-entry.cjs', root).pathname).bundle((error, buffer) => {
-    if (error) reject(error);
-    else resolve(buffer);
-  });
+await build({
+  entryPoints: [new URL('docs-site/editor-entry.cjs', root).pathname],
+  bundle: true,
+  format: 'iife',
+  platform: 'browser',
+  outfile: new URL('brace-docs.js', output).pathname
 });
-await writeFile(new URL('brace-docs.js', output), bundle);
 
 const replacements = {
   '{{ACE_VERSION}}': inventory.aceVersion,

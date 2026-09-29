@@ -11,7 +11,7 @@
 **[Issues](https://github.com/alexandroit/stackline-brace/issues)** |
 **[Repository](https://github.com/alexandroit/stackline-brace)**
 
-**Package version:** `1.0.1`
+**Package version:** `1.0.2`
 
 ## Why this package?
 
@@ -21,7 +21,7 @@ A compatibility-first Browserify build of the modern Ace Editor. It preserves Br
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/brace@1.0.1` |
+| Package | `@stackline/brace@1.0.2` |
 | Node.js runtime | `>=12` |
 | CommonJS / primary entry | `./index.js` |
 | ES module entry | `./index.mjs` |
@@ -42,7 +42,7 @@ npm install @stackline/brace
 Or replace `brace` without changing existing source imports:
 
 ```bash
-npm install brace@npm:@stackline/brace@^1.0.1
+npm install brace@npm:@stackline/brace@^1.0.2
 ```
 
 ## Usage
@@ -145,7 +145,7 @@ Every release gate covers:
 
 - all paths published by `brace@0.11.1`;
 - current generated inventory;
-- Browserify and esbuild bundles;
+- esbuild browser bundles with CommonJS deep imports;
 - a real Chrome editor with a functioning inline worker;
 - TypeScript 3.9 and current TypeScript;
 - direct and npm-alias installation from the packed tarball and registries;

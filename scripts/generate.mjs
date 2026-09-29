@@ -171,7 +171,7 @@ for (const key of ['modes', 'themes', 'extensions', 'keybindings', 'snippets', '
 await write('dist/inventory.json', `${JSON.stringify(inventory, null, 2)}\n`);
 await write('dist/build-meta.json', `${JSON.stringify({
   package: '@stackline/brace',
-  version: '1.0.1',
+  version: '1.0.2',
   aceBuilds: {
     version: packageJson.version,
     npmShasum: 'd657730f665fccf72d2945d95887e12c514a29f1',

@@ -1,6 +1,6 @@
 {
   "package": "@stackline/brace",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "aceBuilds": {
     "version": "1.44.0",
     "npmShasum": "d657730f665fccf72d2945d95887e12c514a29f1",

@@ -26,7 +26,7 @@ Each imported mode registers only the workers it references. Worker source is in
 
 ## Verification
 
-Release verification includes Node contract tests, the complete legacy path inventory, Browserify, esbuild, a real Chrome editor and worker, TypeScript 3.9, current TypeScript, packed direct installation, npm alias installation, package linting, documentation checks, and runtime dependency audit.
+Release verification includes Node contract tests, the complete legacy path inventory, esbuild browser bundles, a real Chrome editor and worker, TypeScript 3.9, current TypeScript, packed direct installation, npm alias installation, package linting, documentation checks, and runtime dependency audit.
 
 ## Licensing
 

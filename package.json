@@ -1,6 +1,6 @@
 {
   "name": "@stackline/brace",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Compatibility-first Browserify build of the modern Ace editor with inline workers",
   "type": "commonjs",
   "main": "./index.js",
@@ -112,7 +112,6 @@
     "@arethetypeswrong/cli": "0.18.5",
     "@eslint/js": "10.0.1",
     "ace-builds": "1.44.0",
-    "browserify": "17.0.1",
     "esbuild": "0.28.2",
     "eslint": "10.9.1",
     "playwright-core": "1.62.1",

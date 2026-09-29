@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.2] - 2026-09-28
+
+- Replace the development-only Browserify dependency in browser tests and documentation builds with the existing esbuild toolchain, removing the unpatched elliptic advisory GHSA-848j-6mx2-7j84 from the full dependency tree.
+- Preserve the same CommonJS fixture, deep imports, editor, mode, theme, inline worker blob and real Chromium worker-annotation assertions; retain the Browserify-compatible package wrappers and public API unchanged.
+- Browserify itself is no longer executed by the maintained release tests; compatibility is retained by the existing CommonJS source format and side-effect imports.
+
 ## [1.0.1] - 2026-09-28
 
 - Replace quadratic Ace loader path normalization with a linear compatibility-preserving segment rewrite.

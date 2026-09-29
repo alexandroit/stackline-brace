@@ -67,7 +67,7 @@ try {
     'package.json'
   ), 'utf8'));
   assert.equal(manifest.name, '@stackline/brace');
-  assert.equal(manifest.version, '1.0.1');
+  assert.equal(manifest.version, '1.0.2');
   assert.equal(manifest.dependencies, undefined);
 } finally {
   if (tarball) await rm(tarball, { force: true });
