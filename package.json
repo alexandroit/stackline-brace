@@ -1,6 +1,6 @@
 {
   "name": "@stackline/brace",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Compatibility-first Browserify build of the modern Ace editor with inline workers",
   "type": "commonjs",
   "main": "./index.js",

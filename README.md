@@ -4,13 +4,13 @@
 
 [![npm version](https://img.shields.io/npm/v/@stackline/brace.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/brace)
 [![license](https://img.shields.io/npm/l/@stackline/brace.svg?style=flat-square)](https://github.com/alexandroit/stackline-brace)
-[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-brace-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-brace)
+[![GitHub repository](https://img.shields.io/badge/GitHub-repository-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-brace)
 [![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/brace/)
 [![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
 
 **[Documentation](https://alexandro.net/docs/vanilla/brace/)** | **[npm](https://www.npmjs.com/package/@stackline/brace)** | **[Issues](https://github.com/alexandroit/stackline-brace/issues)** | **[Repository](https://github.com/alexandroit/stackline-brace)**
 
-**Current package version:** `1.0.3`
+**Current package version:** `1.0.4`
 
 ---
 
@@ -22,7 +22,7 @@ A compatibility-first Browserify build of the modern Ace Editor. It preserves Br
 
 | Item | Value |
 | --- | --- |
-| Package | `@stackline/brace@1.0.3` |
+| Package | `@stackline/brace@1.0.4` |
 | Node.js runtime | `>=12` |
 | CommonJS / primary entry | `./index.js` |
 | ES module entry | `./index.mjs` |
