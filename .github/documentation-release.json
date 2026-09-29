@@ -4,7 +4,7 @@
     {
       "name": "@stackline/brace",
       "path": "README.md",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "baselineVersion": "1.0.2",
       "keywords": [
         "stackline",
@@ -25,8 +25,8 @@
       "homepage": "https://alexandro.net/docs/vanilla/brace/",
       "baselineTarball": "https://registry.npmjs.org/@stackline/brace/-/brace-1.0.2.tgz",
       "baselineIntegrity": "sha512-rGYvTGYabV0PCRMuMHrYzLW+EozV4BGDtjSdQk+t38FtDmZmCd5Fyw1wd5gASF6BKpWfAkujE+ucvLCsF9sS3w==",
-      "expectedSha512": "08a5b6fb3d126cc586cb5a8287df0fb4b51ec2f37958c4faf5819db3d5e1499d2fa3b411e5df7f8ccaced96bd1291e25875615090ddedba53f7b0d6a649a117e",
-      "tag": "docs-stackline-brace-v1.0.3"
+      "expectedSha512": "8b8f731792453763ad211a8097e285b8fa1e116478bfe3f0576e5bfeef4f0d45068cdb1951db0553dcdccb1b18b36872a57b94c05c90fc71536bf621ee735757",
+      "tag": "docs-stackline-brace-v1.0.4"
     }
   ]
 }
