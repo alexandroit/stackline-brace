@@ -113,8 +113,8 @@
     "@eslint/js": "10.0.1",
     "ace-builds": "1.44.0",
     "esbuild": "0.28.2",
-    "eslint": "10.9.1",
-    "playwright-core": "1.62.1",
+    "eslint": "10.11.0",
+    "playwright-core": "1.63.0",
     "publint": "0.3.24",
     "typescript": "7.0.2",
     "typescript-3-9": "npm:typescript@3.9.10"
